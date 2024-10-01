@@ -1,0 +1,192 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+main{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.contain{
+    background-color: rgb(247, 239, 229);
+    width: 32rem;
+    height: 45rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.img{
+    margin-top: 1rem;
+    height: 18rem;
+    width: 25rem;
+    border-bottom: 1px solid gray;
+    border-radius: 1rem;
+}
+img{
+    height: 18rem;
+    width: 100%;
+    border-radius:1rem;
+    object-fit: cover;
+}
+.title{
+    /* padding: .5rem; */
+    height: 2rem;
+    width: 100%;
+    /* border-bottom: 1px solid gray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:2rem;
+    color: black;
+    cursor: pointer;
+}
+.serving{
+    margin-top: -6rem;
+}
+.prep p, .serving p{
+    font-weight: 600;
+    background-color: bisque;
+}
+
+.prep, .serving{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.2rem;
+}
+.ques{
+    width: 100%;
+    height: auto;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: red;
+    border-bottom: 1px solid gray;
+}
+
+.btn{
+    margin:1rem;
+    width: 10rem;
+    font-size: 1.5rem !important;
+}
+#mybtn_ing{
+    height: 3rem !important;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    width: 100% !important; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    padding: 10rem;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    margin:12rem;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2rem !important;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .modal-content h4{
+    font-weight: 800;
+    border-bottom: 1px solid gray;
+  }
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    position: absolute;
+    right:1rem;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.modal-content .prep{
+    font-size: 2rem;
+    transition: height 2s;
+    border-bottom: 1px solid gray;
+}
+.ing .active{
+    background-color: rgb(255, 255, 255);
+    color: black !important;
+    width: fit-content;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    border: 1px solid black;
+    padding:.5rem;
+    margin-bottom: 1rem;
+}
+.active:hover{
+    background-color: black;
+    color: white !important;
+    border: 1px solid white;
+}
+
+@media screen and (max-width:600px){
+    main{
+        height: 100vh;
+        width: 100vw;
+    }
+    .contain{
+        width: 23rem;
+    }
+    .img{
+        width: 20rem;
+    }
+    .serving{
+        margin-top:0 ;
+    }
+    .prep{
+        margin-top:1rem;
+        
+        text-align: center;
+    }
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        width: 100% !important; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        padding: 5rem;
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+    .modal-content {
+        margin:5rem;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 1rem !important;
+        border: 1px solid #888;
+        width: 100%;
+      }
+     #mybtn_ing{
+        width: 10rem !important;
+        height: fit-content !important;
+        font-size: 1rem !important;
+     }
+}
