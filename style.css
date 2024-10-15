@@ -1,16 +1,56 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-main{
+
+.contain .btns .btn {
+    width: 7.2rem !important;
+    font-size: 18px !important;
+}
+
+.btns .btn:hover {
+    box-shadow:
+        6px 6px 6px rgba(49, 44, 44, 0.3);
+    /* small shadow */
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+.ing .btn:hover {
+    box-shadow:
+        10px 10px 10px rgba(49, 44, 44, 0.3);
+    /* small shadow */
+    transform: scale3d(1.1, 1.1, 1);
+    /* Scales 120% on X and Y, but unchanged on Z */
+
+}
+
+@media print {
+    body {
+        font-family: sans-serif;
+    }
+
+    .btns .btn {
+        color: black !important;
+        --bs-btn-bg: #0d6efd !important;
+    }
+}
+
+@media print {
+    button {
+        display: none;
+    }
+}
+
+main {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
-.contain{
+
+.contain {
     background-color: rgb(247, 239, 229);
     width: 32rem;
     height: 45rem;
@@ -23,20 +63,23 @@ main{
     justify-content: space-around;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.img{
+
+.img {
     margin-top: 1rem;
     height: 18rem;
     width: 25rem;
     border-bottom: 1px solid gray;
     border-radius: 1rem;
 }
-img{
+
+img {
     height: 18rem;
     width: 100%;
-    border-radius:1rem;
+    border-radius: 1rem;
     object-fit: cover;
 }
-.title{
+
+.title {
     /* padding: .5rem; */
     height: 2rem;
     width: 100%;
@@ -44,26 +87,31 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:2rem;
+    font-size: 2rem;
     color: black;
     cursor: pointer;
 }
-.serving{
+
+.serving {
     margin-top: -6rem;
 }
-.prep p, .serving p{
+
+.prep p,
+.serving p {
     font-weight: 600;
     background-color: bisque;
 }
 
-.prep, .serving{
+.prep,
+.serving {
     height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:1.2rem;
+    font-size: 1.2rem;
 }
-.ques{
+
+.ques {
     width: 100%;
     height: auto;
     font-size: 1.4rem;
@@ -72,121 +120,208 @@ img{
     border-bottom: 1px solid gray;
 }
 
-.btn{
-    margin:1rem;
+.btn {
+    margin: 1rem;
     width: 10rem;
     font-size: 1.5rem !important;
 }
-#mybtn_ing{
+
+#mybtn_ing {
     height: 3rem !important;
 }
+
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    width: 100% !important; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    width: 100% !important;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
     padding: 10rem;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    margin:12rem;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    margin: 12rem;
     background-color: #fefefe;
     margin: auto;
     padding: 2rem !important;
     border: 1px solid #888;
     width: 80%;
-  }
-  
-  .modal-content h4{
+}
+
+.modal-content h4 {
     font-weight: 800;
     border-bottom: 1px solid gray;
-  }
-  /* The Close Button */
-  .close {
+}
+
+/* The Close Button */
+.close {
     color: #aaaaaa;
     position: absolute;
-    right:1rem;
+    right: 1rem;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
-.modal-content .prep{
+}
+
+.modal-content .prep {
     font-size: 2rem;
     transition: height 2s;
     border-bottom: 1px solid gray;
 }
-.ing .active{
+
+.ing .active {
     background-color: rgb(255, 255, 255);
     color: black !important;
     width: fit-content;
     font-size: 1.2rem;
     border-radius: .5rem;
     border: 1px solid black;
-    padding:.5rem;
+    padding: .5rem;
     margin-bottom: 1rem;
 }
-.active:hover{
+
+.active:hover {
     background-color: black;
     color: white !important;
     border: 1px solid white;
 }
 
-@media screen and (max-width:600px){
-    main{
+@media screen and (max-width:600px) {
+    main {
         height: 100vh;
         width: 100vw;
     }
-    .contain{
+
+    .contain {
         width: 23rem;
     }
-    .img{
+
+    .img {
         width: 20rem;
     }
-    .serving{
-        margin-top:0 ;
+
+    .serving {
+        margin-top: 0;
     }
-    .prep{
-        margin-top:1rem;
-        
+
+    .prep {
+        margin-top: 1rem;
+
         text-align: center;
     }
 
     .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        width: 100% !important; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        width: 100% !important;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
         padding: 5rem;
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-      }
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
     .modal-content {
-        margin:5rem;
+        margin: 5rem;
         background-color: #fefefe;
         margin: auto;
         padding: 1rem !important;
         border: 1px solid #888;
         width: 100%;
-      }
-     #mybtn_ing{
+    }
+
+    #mybtn_ing {
         width: 10rem !important;
         height: fit-content !important;
         font-size: 1rem !important;
-     }
+    }
+}
+
+.trigger {
+    text-align: center;
+    padding: 7px 13px;
+    background: #3e3e3e;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+}
+
+.modal1 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal1-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.close-button1 {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
